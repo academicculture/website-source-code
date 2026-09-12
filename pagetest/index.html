@@ -32,12 +32,15 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Janpan - Arlby Labs - Arlby of Academic Culture Times</title>
+  <title>Test Page - Arlby Labs - Arlby of Academic Culture Times</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  
+  <meta name="description" content="Test Page
+
+
+document.queryS...">
   <meta name="author" content="Arlby Labs">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -173,7 +176,7 @@ document.ondragstart = function(){return false}
       
       
     </div>
-    <div class="center">Janpan</div>
+    <div class="center">Test Page</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -208,94 +211,70 @@ document.ondragstart = function(){return false}
     
   </div>
 </nav>
-  
-
-
-<main id="main">
-  <section class="gallery container">
-    <header class="header">
-  <h1 class="header-title">Janpan</h1>
-  <p class="header-subtitle">Test1</p>
-</header>
-    <div id="wrap" class=waterfallWrap default-type="waterfall" default-col="3">
-      <a
-      data-fancybox="images"
-      style="width:33.333333333333336%"
-      href="/images/theme/p1.jpg"
-      class="item"
-    >
-      <img   class="lazyload" data-original="/images/theme/p1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="/images/theme/p1.jpg" />
-    </a>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/img/t1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Test Page</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>September 12, 2026</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>330</span>
     </div>
-  </section>
-</main>
-
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h2 id="Test-Page"><a href="#Test-Page" class="headerlink" title="Test Page"></a>Test Page</h2><p><video class="hls-video" controls data-src="/test/test.m3u8"></video></p>
+<p><video class="hls-video" controls data-src="/test/video.m3u8"></video></p>
 <script>
-  var gap = 10;
-  var items = document.getElementsByClassName('item');
-  var wrap = document.getElementById("wrap");
+document.querySelectorAll('.hls-video').forEach(video => {
+    const url = video.dataset.src;
 
-  window.onload = function () {
-    waterFall();
-  }
-
-  window.onresize = function () {
-    setTimeout(() => {
-      waterFall();
-    }, 1000)
-  }
-
-  function waterFall() {
-    if (!(wrap.getAttribute('default-type') === 'waterfall')) return;
-    var wrapWidth = getClientWidth();
-    var columns;
-    if(wrapWidth < 768 && wrapWidth >= 576) {
-      columns = 2;
-    } else if (wrapWidth < 576) {
-      columns = 1;
-    } else {
-      columns = parseInt(wrap.getAttribute('default-col'));
+    if (Hls.isSupported()) {
+        const hls = new Hls;
+        hls.loadSource(url);
+        hls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
     }
-    rerenderImage(columns, wrapWidth);
-  }
-
-  function rerenderImage(col, pageWidth) {
-    var arr = [];
-    var maxHeight = 0;
-    const itemWidth = (100 / col) + '%';
-    for (var i = 0;i < items.length; i++){
-      if (i < col) {
-        items[i].style.top = 0;
-        items[i].style.left = (pageWidth / col  + gap) * i + 'px';
-        items[i].style.width = itemWidth;
-        arr.push(items[i].offsetHeight);
-      } else {
-        var minHeight = arr[0];
-        var index = 0;
-        for (var j = 0; j < arr.length; j++) {
-          if (minHeight > arr[j]) {
-            minHeight = arr[j];
-            index = j;
-          } 
-        }
-        items[i].style.top = arr[index] + gap + 'px';
-        items[i].style.left = items[index].offsetLeft + 'px';
-        items[i].style.width = itemWidth;
-        arr[index] = arr[index] + items[i].offsetHeight + gap;
-      }
-    }
-    for (var m = 0; m < arr.length; m++) {
-      if (maxHeight < arr[m]) {
-        maxHeight = arr[m];
-      } 
-    }
-    wrap.style.height = maxHeight + 'px';
-  }
-
-  function getClientWidth() {
-    return wrap.getBoundingClientRect().width;
-  }
+});
 </script>
+      </section>
+      <section class="extra">
+        
+        
+        
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/tastt/">Statement and Special thanks to...<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">Table of Contents: </h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Test-Page"><span class="toc-text">Test Page</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
   
 
 

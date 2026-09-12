@@ -80,6 +80,9 @@
   
 
   <script>
+    document.oncontextmenu = function(){return false}
+if (parent.frames.length > 0) top.location.replace(document.location);
+document.ondragstart = function(){return false}
     
     var CONFIG = window.CONFIG || {};
     var mainjs = window.mainjs || {};
@@ -145,6 +148,7 @@
       }
     }
   </script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
   
 
@@ -229,7 +233,7 @@
 <p>Unless otherwise stated, the content on this website may be reproduced, shared, or used for commercial purposes. However, <strong>Arlby Labs &amp; Times Academicculture</strong> assumes no liability or responsibility for any consequences or associated claims arising from such use.</p>
 <p><strong>Arlby Labs &amp; Times Academicculture</strong> reserves the right of final interpretation of these terms.</p>
 <h2 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h2><p>Github: github.com&#x2F;academicculture</p>
-<p>Contact Email:<br><a href="mailto:&#x61;&#98;&#x75;&#115;&#x65;&#64;&#x61;&#x72;&#x6c;&#x62;&#121;&#46;&#99;&#111;&#109;">abuse@arlby.com</a><br><a href="mailto:&#97;&#x62;&#x75;&#115;&#x65;&#99;&#111;&#x6d;&#112;&#x6c;&#x61;&#x69;&#x6e;&#x74;&#x40;&#97;&#x63;&#x61;&#x64;&#x65;&#109;&#105;&#x63;&#99;&#x75;&#x6c;&#116;&#117;&#x72;&#101;&#46;&#99;&#111;&#x6d;">abusecomplaint@academicculture.com</a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>Contact Email:<br><a href="mailto:&#97;&#98;&#x75;&#115;&#101;&#64;&#x61;&#x72;&#108;&#x62;&#x79;&#46;&#99;&#x6f;&#x6d;">abuse@arlby.com</a><br><a href="mailto:&#97;&#x62;&#x75;&#x73;&#x65;&#x63;&#111;&#x6d;&#112;&#108;&#x61;&#x69;&#110;&#116;&#x40;&#x61;&#99;&#x61;&#100;&#x65;&#109;&#x69;&#x63;&#x63;&#117;&#x6c;&#x74;&#117;&#114;&#101;&#x2e;&#x63;&#x6f;&#109;">abusecomplaint@academicculture.com</a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
       </section>
       <section class="extra">
@@ -453,6 +457,219 @@
         gap: 4px;
       }
     }
+
+
+
+
+
+
+
+
+section {
+	border:0;
+	margin:0;
+	padding:0;
+	font-size:100%
+}
+
+section {
+	display:block
+}
+
+#one {
+	-webkit-animation:one 25s ease-in-out infinite alternate;
+	-moz-animation:one 25s ease-in-out infinite alternate;
+	-ms-animation:one 25s ease-in-out infinite alternate;
+	-o-animation:one 25s ease-in-out infinite alternate;
+	animation:one 25s ease-in-out infinite alternate
+}
+@-webkit-keyframes one {
+	from {
+	-webkit-box-shadow:0 0 250px 20px #473C78
+}
+to {
+	-webkit-box-shadow:0 0 100px 15px #F72A3B
+}
+}@-moz-keyframes one {
+	from {
+	-moz-box-shadow:0 0 250px 20px #473C78
+}
+to {
+	-moz-box-shadow:0 0 100px 15px #F72A3B
+}
+}@-o-keyframes one {
+	from {
+	-o-box-shadow:0 0 250px 20px #473C78
+}
+to {
+	-o-box-shadow:0 0 100px 15px #F72A3B
+}
+}@keyframes one {
+	from {
+	box-shadow:0 0 250px 20px #473C78
+}
+to {
+	box-shadow:0 0 100px 15px #F72A3B
+}
+}#two {
+	width:90%;
+	-webkit-animation:two 4s ease-in-out infinite alternate;
+	-moz-animation:two 4s ease-in-out infinite alternate;
+	-ms-animation:two 4s ease-in-out infinite alternate;
+	-o-animation:two 4s ease-in-out infinite alternate;
+	animation:two 4s ease-in-out infinite alternate
+}
+@-webkit-keyframes two {
+	from {
+	-webkit-box-shadow:0 0 250px 20px #18C499
+}
+to {
+	-webkit-box-shadow:0 0 100px 15px #D8F05E
+}
+}@-moz-keyframes two {
+	from {
+	-moz-box-shadow:0 0 250px 20px #18C499
+}
+to {
+	-moz-box-shadow:0 0 100px 15px #D8F05E
+}
+}@-o-keyframes two {
+	from {
+	-o-box-shadow:0 0 250px 20px #18C499
+}
+to {
+	-o-box-shadow:0 0 100px 15px #D8F05E
+}
+}@keyframes two {
+	from {
+	box-shadow:0 0 250px 20px #18C499
+}
+to {
+	box-shadow:0 0 100px 15px #D8F05E
+}
+}#three {
+	width:80%;
+	-webkit-animation:three 3s ease-in-out infinite alternate;
+	-moz-animation:three 3s ease-in-out infinite alternate;
+	-ms-animation:three 3s ease-in-out infinite alternate;
+	-o-animation:three 3s ease-in-out infinite alternate;
+	animation:three 3s ease-in-out infinite alternate
+}
+@-webkit-keyframes three {
+	from {
+	-webkit-box-shadow:0 0 250px 20px #FFDD00
+}
+to {
+	-webkit-box-shadow:0 0 100px 15px #3E33FF
+}
+}@-moz-keyframes three {
+	from {
+	-moz-box-shadow:0 0 250px 20px #FFDD00
+}
+to {
+	-moz-box-shadow:0 0 100px 15px #3E33FF
+}
+}@-o-keyframes three {
+	from {
+	-o-box-shadow:0 0 250px 20px #FFDD00
+}
+to {
+	-o-box-shadow:0 0 100px 15px #3E33FF
+}
+}@keyframes three {
+	from {
+	box-shadow:0 0 250px 20px #FFDD00
+}
+to {
+	box-shadow:0 0 100px 15px #3E33FF
+}
+}#four {
+	width:70%;
+	-webkit-animation:four 4s ease-in-out infinite alternate;
+	-moz-animation:four 4s ease-in-out infinite alternate;
+	-ms-animation:four 4s ease-in-out infinite alternate;
+	-o-animation:four 4s ease-in-out infinite alternate;
+	animation:four 4s ease-in-out infinite alternate
+}
+@-webkit-keyframes four {
+	from {
+	-webkit-box-shadow:0 0 250px 20px #781848
+}
+to {
+	-webkit-box-shadow:0 0 100px 15px #F2BBE9
+}
+}@-moz-keyframes four {
+	from {
+	-moz-box-shadow:0 0 250px 20px #781848
+}
+to {
+	-moz-box-shadow:0 0 100px 15px #F2BBE9
+}
+}@-o-keyframes four {
+	from {
+	-o-box-shadow:0 0 250px 20px #781848
+}
+to {
+	-o-box-shadow:0 0 100px 15px #F2BBE9
+}
+}@keyframes four {
+	from {
+	shadow:0 0 250px 20px #781848
+}
+to {
+	shadow:0 0 100px 15px #F2BBE9
+}
+}#five {
+	width:60%;
+	-webkit-animation:five 5s ease-in-out infinite alternate;
+	-moz-animation:five 5s ease-in-out infinite alternate;
+	-ms-animation:five 5s ease-in-out infinite alternate;
+	-o-animation:five 5s ease-in-out infinite alternate;
+	animation:five 5s ease-in-out infinite alternate
+}
+@-webkit-keyframes five {
+	from {
+	-webkit-box-shadow:0 0 250px 20px #42F2A1
+}
+to {
+	-webkit-box-shadow:0 0 100px 15px #F4F6AD
+}
+}@-moz-keyframes five {
+	from {
+	-moz-box-shadow:0 0 250px 20px #42F2A1
+}
+to {
+	-moz-box-shadow:0 0 100px 15px #F4F6AD
+}
+}@-o-keyframes five {
+	from {
+	-o-box-shadow:0 0 250px 20px #42F2A1
+}
+to {
+	-o-box-shadow:0 0 100px 15px #F4F6AD
+}
+}@keyframes five {
+	from {
+	box-shadow:0 0 250px 20px #42F2A1
+}
+to {
+	box-shadow:0 0 100px 15px #F4F6AD
+}
+}
+
+
+#video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hls-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
   </style>
 
 
